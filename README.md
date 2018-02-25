@@ -30,7 +30,7 @@ ansible --version
 ansible 2.4.2.0
 ```
 * setup post install
-** edit /etc/ansible/ansible.cfg
+ * edit /etc/ansible/ansible.cfg
 uncomment following lines:
 ```
 inventory      = /etc/ansible/hosts
