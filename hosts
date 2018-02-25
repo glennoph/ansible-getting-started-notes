@@ -1,3 +1,8 @@
-[local]
-localhost
-
+[local]                                                                                             
+localhost                                                                                           
+                                                                                                    
+[centos]                                                                                            
+centos                                                                                              
+                                                                                                    
+[ubuntu]                                                                                            
+ubuntu
