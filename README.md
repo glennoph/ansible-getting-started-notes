@@ -25,12 +25,12 @@ sudo yum install git python python-devel python-pip openssl ansible
 ```
 
 * check that ansible is installed
-```bash
+```shell
 ansible --version
 ansible 2.4.2.0
 ```
-* setup post install
- * edit /etc/ansible/ansible.cfg
+### Post install Setup of control 
+* edit /etc/ansible/ansible.cfg
 uncomment following lines:
 ```
 inventory      = /etc/ansible/hosts
