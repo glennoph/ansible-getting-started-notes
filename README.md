@@ -36,3 +36,42 @@ uncomment following lines:
 inventory      = /etc/ansible/hosts
 sudo_user      = root
 ```
+* edit /etc/ansible/hosts
+see [hosts](hosts)
+
+* add user ansible
+`sudo adduser ansible`
+
+* set password for ansible user, hint: secr2018
+`sudo passwd ansible`
+allow sudo without password:
+`sudo visudo`
+below root add line:
+`ansible ALL=(ALL)       NOPASSWD: ALL`
+
+* add user ansible to *centos* server
+`sudo adduser ansible`
+`sudo passwd ansible`
+`sudo visudo`
+
+* add user ansible to *ubuntu* server
+`sudo adduser ansible`
+`sudo visudo`
+add line
+`ansible ALL=(ALL) NOPASSWD: ALL`
+su ansible
+`sudo su ansible -`
+apt-get update
+`sudo apt-get update`
+(if the update cmd runs without prompting for password, then setup is good)
+
+* ssh key exchange so do not have to enter passwords for ansible commands
+(on control)
+```
+sudo su ansible -
+ssh keygen
+
+```
+
+
+
