@@ -69,9 +69,24 @@ apt-get update
 (on control)
 ```
 sudo su ansible -
-ssh keygen
-
+ssh-keygen # dft location, no passphrase
 ```
+* copy ssh id to ansible@centos 
+`ssh-copy-id ansible@centos`
+are you sure? yes
+enter pw for ansible.
+ssh to centos:
+`ssh ansible@centos`
+(if logged in to ansible@centos, then good)
+
+* copy ssh id to ansible@ubuntu 
+`ssh-copy-id ansible@ubuntu`
+are you sure? yes
+enter pw for ansible.
+ssh to ubuntu:
+`ssh ansible@ubuntu`
+(if logged in to ansible@ubuntu, then good)
+
 
 
 
