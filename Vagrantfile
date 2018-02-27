@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.provision :shell, inline: "echo start"
-  
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
   # ansible control node
   config.vm.define :control, primary: true do |control_config|
     control_config.vm.box = "geerlingguy/centos7"
