@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   # ansible control node
   config.vm.define :control do |control_config|
     config.vm.provision :shell, inline: "echo start control"
-    control_config.vm.box = "centos7"
+    control_config.vm.box = "geerlingguy/centos7"
     control_config.vm.hostname = "control"
     #control_config.vm.network :private_network, ip: "10.0.17.10"
     control_config.vm.network "public_network", bridge: "eth0", ip: "10.0.17.10"
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   # centos client
   config.vm.define :centos do |centos_config|
     config.vm.provision :shell, inline: "echo start centos"
-    centos_config.vm.box = "centos7"
+    centos_config.vm.box = "geerlingguy/centos7"
     centos_config.vm.hostname = "centos"
     centos_config.vm.network "public_network", ip: "10.0.17.11",
                              bridge: "eth0"
